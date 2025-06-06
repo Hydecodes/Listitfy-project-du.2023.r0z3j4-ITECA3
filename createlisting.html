@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Listing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="Ribbon">
+      <div class="ribbon-content">
+        <div class="ribbon-center">
+          <img src ="Listify logo.png" alt="Listify Logo" class="logo">
+        </div>
+      </div>
+    </div>
+
+    <form action="createlisting.php" method="post" enctype="multipart/form-data">
+        <div class ='container' style="width: 50%; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+            <h2>Create a Listing</h2>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter title" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Enter Product Description"></textarea>
+
+            <label for="price">Price R</label>
+            <input type="number" id="price" name="price" required>
+
+            <label for ='cond'>Condition</label>
+            <select id="cond" name="cond" required>
+                <option value="" disabled selected>Select condition</option>
+                <option value="new">New</option>
+                <option value="Used - Good">Used - Good</option>
+                <option value="Used - Fair">Used - Fair</option>
+                <option value="Used - Poor">Used - Poor</option>
+            </select>
+
+            <label for="stock_quan">Stock Quantity</label>
+            <input type="number" id="stock_quan" name="stock_quan" required>
+
+            <label for ="tags">Tags (seperate with commas)</label>
+            <input type="text" id="tags" name="tags" placeholder="e.g. electronics, phone, used"></input>
+
+            <label for="location">City</label>
+            <input type="text" id="city" name="city" placeholder="City" required>
+
+            <label for="images">Images</label>
+            <input type="file" id="images" name="images[]" multiple required><br>
+
+            <button type ="submit">Create listing</button>
+            <button type ="button" onclick ="window.location.href='home.php'">Back to Home</button>
+        </div>
+      </form>
+      
+    
+</body>
+</html>
